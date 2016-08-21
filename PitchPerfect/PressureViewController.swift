@@ -9,6 +9,9 @@
 import UIKit
 
 class PressureViewController: UIViewController {
+    
+    @IBOutlet weak var myLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

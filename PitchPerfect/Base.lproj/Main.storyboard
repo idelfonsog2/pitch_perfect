@@ -164,7 +164,7 @@
                         <outlet property="snailButton" destination="XvI-9e-OiZ" id="I6A-Mr-fht"/>
                         <outlet property="stopButton" destination="dGb-W5-Dcv" id="HXX-5h-DiH"/>
                         <outlet property="vaderButton" destination="seb-dZ-rHW" id="BMK-Bu-7Mc"/>
-                        <segue destination="Ybh-lh-mQR" kind="show" id="D2a-pC-E0T"/>
+                        <segue destination="Ybh-lh-mQR" kind="show" identifier="stopPlaySound" id="D2a-pC-E0T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtW-bk-54B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,9 +191,18 @@
                                 <rect key="frame" x="280" y="425" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZI-vA-LnO">
+                                <rect key="frame" x="278" y="354" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myLabel" destination="qZI-vA-LnO" id="Zgd-7N-qX5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eC-PC-mYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
