@@ -58,18 +58,18 @@ class PlaySoundsViewController: UIViewController {
     {
         print("stop button pressed")
         stopAudio()
-//        self.performSegueWithIdentifier("stopPlaySound", sender: miTexto)
+        self.performSegueWithIdentifier("stopPlaySound", sender: miTexto)
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if (segue.identifier == "stopPlaySound") {
-//            let pressureVC = segue.destinationViewController as! PressureViewController
-//            pressureVC.myLabel.text = miTexto
-//        } else
-//        {
-//            print("Saving of recording Failed")
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "stopPlaySound") {
+            let pressureVC = segue.destinationViewController as! PressureViewController
+            pressureVC.myLabel.text = miTexto
+        } else
+        {
+            print("text not transfer to PVC")
+        }
+    }
     
 
     override func viewDidLoad() {
