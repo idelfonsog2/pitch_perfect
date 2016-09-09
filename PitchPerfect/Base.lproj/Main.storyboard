@@ -156,6 +156,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="IT4-pf-Arp" secondAttribute="trailing" id="rrW-fF-hGM"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="chipmunkButton" destination="aKp-4h-9HF" id="CvG-ra-aYx"/>
                         <outlet property="echoButton" destination="y55-nY-sf7" id="lLG-ln-jc6"/>
@@ -164,49 +165,11 @@
                         <outlet property="snailButton" destination="XvI-9e-OiZ" id="I6A-Mr-fht"/>
                         <outlet property="stopButton" destination="dGb-W5-Dcv" id="HXX-5h-DiH"/>
                         <outlet property="vaderButton" destination="seb-dZ-rHW" id="BMK-Bu-7Mc"/>
-                        <segue destination="Ybh-lh-mQR" kind="show" identifier="stopPlaySound" id="D2a-pC-E0T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtW-bk-54B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1695" y="999"/>
-        </scene>
-        <!--Pressure View Controller-->
-        <scene sceneID="ZTI-Yq-xPf">
-            <objects>
-                <viewController id="Ybh-lh-mQR" customClass="PressureViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="431-D4-4As"/>
-                        <viewControllerLayoutGuide type="bottom" id="oZV-fx-wRJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MaI-05-0Ab">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W12-OJ-dX9">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
-                                <state key="normal" title="Play"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWe-3r-2xa">
-                                <rect key="frame" x="280" y="425" width="40" height="30"/>
-                                <state key="normal" title="Share"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZI-vA-LnO">
-                                <rect key="frame" x="278" y="354" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="myLabel" destination="qZI-vA-LnO" id="Zgd-7N-qX5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1eC-PC-mYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1593" y="1803"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P7w-G9-Py9">
