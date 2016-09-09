@@ -33,8 +33,7 @@ class PlaySoundsViewController: UIViewController {
         case Slow = 0, Fast, Chipmunk, Vader, Reverb, Echo
     }
     
-    @IBAction func playSoundForButton(sender: UIButton)
-    {
+    @IBAction func playSoundForButton(sender: UIButton) {
         print("Play Sound button pressed")
         switch (ButtonType(rawValue: sender.tag)!) {
         case .Slow:
@@ -54,21 +53,8 @@ class PlaySoundsViewController: UIViewController {
         configureUI(.Playing)
     }
     
-    @IBAction func stopButtonPressed(sender: UIButton)
-    {
-        print("stop button pressed")
+    @IBAction func stopButtonPressed(sender: UIButton) {
         stopAudio()
-        self.performSegueWithIdentifier("stopPlaySound", sender: miTexto)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "stopPlaySound") {
-            let pressureVC = segue.destinationViewController as! PressureViewController
-            pressureVC.myLabel.text = miTexto
-        } else
-        {
-            print("text not transfer to PVC")
-        }
     }
     
 
@@ -88,14 +74,6 @@ class PlaySoundsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         configureUI(.NotPlaying)
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

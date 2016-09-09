@@ -24,23 +24,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
     }
     
-    func authenticateUser()
-    {
-        let context = LAContext()
-        var error: NSError?
-        let myLocalizedReasonString = "Authentication is required"
-        
-        //check if the divice is compatible with touch ID
-        if context.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error)
-        {
-            context.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: myLocalizedReasonString, reply: { (success : Bool, evaluationError : NSError?) -> Void in if success { NSOperationQueue.mainQueue().addOperationWithBlock({()-> Void in self.loadData()}) } })
-        }
-        
-    }
-    
-    func loadData() {
-        print("Load Data")
-    }
     
     func showPasswordAlert() {}
     
@@ -51,7 +34,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        authenticateUser()
     }
     
     override func didReceiveMemoryWarning() {
@@ -85,7 +67,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func stopRecording(sender: AnyObject)
     {
-        print("stopButton was preessed")
         recordButton.enabled = true
         stopRecordingButton.enabled = false
         recordingLabel.text = "Tap to Record"
@@ -100,7 +81,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             print("AVAudioRecorded Finish Recording"
         )
             if flag {
-                self.performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
+                performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
             }
             else
             {
